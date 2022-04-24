@@ -90,4 +90,9 @@ class SiteController extends Controller
     {
         return $this->render('root');
     }
+
+    public function actionPgrid()
+    {
+        return $this->render('pgrid');
+    }
 }
