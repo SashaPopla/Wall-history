@@ -95,4 +95,10 @@ class SiteController extends Controller
     {
         return $this->render('pgrid');
     }
+
+    public function actionView($id)
+    {
+        $model = Post::findOne($id);
+        return $this->render('view', ['model' => $model]);
+    }
 }

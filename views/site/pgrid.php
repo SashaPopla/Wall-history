@@ -22,7 +22,8 @@ $this->title = 'Грид-виджер';
     'dataProvider' => $dataProvider,
     'columns' => [
         [
-            'class' => 'yii\grid\SerialColumn'
+            'attribute' => 'id',
+            'label' => 'id'
         ],
         [
             'attribute' => 'author',
@@ -30,7 +31,8 @@ $this->title = 'Грид-виджер';
         ],
         [
             'attribute' => 'text',
-            'label' => 'Сообщение'
+            'label' => 'Сообщение',
+            'format' => 'html'
         ],
         [
             'attribute' => 'time',
@@ -41,6 +43,7 @@ $this->title = 'Грид-виджер';
             'attribute' => 'ip',
             'label' => 'IP'
         ],
+        ['class' => 'yii\grid\ActionColumn'],
     ],
 ]);
 ?>
