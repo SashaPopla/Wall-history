@@ -23,25 +23,26 @@ $this->title = 'Грид-виджер';
     'columns' => [
         [
             'attribute' => 'id',
-            'label' => 'id'
+            'label' => 'id',
         ],
         [
             'attribute' => 'author',
-            'label' => 'Имя автора'
+            'label' => 'Имя автора',
+            'format' => 'text',
         ],
         [
             'attribute' => 'text',
             'label' => 'Сообщение',
-            'format' => 'html'
+            'format' => 'text',
         ],
         [
             'attribute' => 'time',
             'format' => 'relativeTime',
-            'label' => 'Время отправки'
+            'label' => 'Время отправки',
         ],
         [
             'attribute' => 'ip',
-            'label' => 'IP'
+            'label' => 'IP',
         ],
         ['class' => 'yii\grid\ActionColumn'],
     ],

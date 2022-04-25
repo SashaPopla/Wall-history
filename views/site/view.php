@@ -17,7 +17,7 @@ echo DetailView::widget([
         'author',
         [
             'attribute' =>'text',
-            'format' => 'html',
+            'format' => 'text',
         ],
         'ip',
         [
