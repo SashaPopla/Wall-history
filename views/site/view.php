@@ -15,11 +15,14 @@ echo DetailView::widget([
     'attributes' => [
         'id',
         'author',
-        'text',
+        [
+            'attribute' =>'text',
+            'format' => 'html',
+        ],
         'ip',
         [
-            'label' => 'Time',
-            'value' => date('d.m.y',$model->time),
+            'attribute' => 'time',
+            'format' => 'relativeTime',
         ],
     ],
 

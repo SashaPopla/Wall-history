@@ -36,7 +36,7 @@ $this->title = 'Грид-виджер';
         ],
         [
             'attribute' => 'time',
-            'format' => ['date', 'php:Y-m-d'],
+            'format' => 'relativeTime',
             'label' => 'Время отправки'
         ],
         [
