@@ -67,7 +67,8 @@ $this->title = 'История';
 $script = <<<JS
     $('#btn').on('click', function() {
         $.ajax({
-            url: 'index.php?r=wall/index',
+            //url: 'index.php?r=wall/index',
+            url: 'post',
             type: 'POST',
             data: {
                 test: '1323'

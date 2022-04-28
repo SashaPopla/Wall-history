@@ -75,15 +75,15 @@ class SiteController extends Controller
 
         if($post->load(Yii::$app->request->post())){
             if($post->save()){
-                Yii::$app->session->setFlash('success', 'Готово');
+                Yii::$app->session->setFlash('success', 'Сообщение было отправлено');
                 return $this->refresh();
             }
             else{
-                Yii::$app->session->setFlash('error', 'Ошибка');
+                Yii::$app->session->setFlash('error', 'Возникла ошибка! Сообщение не удалось отправить');
             }
         }
 
-        return $this->render('post', compact('post'));
+        return $this->render('post', ['post' => $post]);
     }
 
     public function actionRoot()
@@ -99,6 +99,7 @@ class SiteController extends Controller
     public function actionView($id)
     {
         $model = Post::findOne($id);
+
         return $this->render('view', ['model' => $model]);
     }
 }
