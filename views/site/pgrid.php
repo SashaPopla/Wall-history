@@ -44,7 +44,10 @@ $this->title = 'Грид-виджер';
             'attribute' => 'ip',
             'label' => 'IP',
         ],
-        ['class' => 'yii\grid\ActionColumn'],
+        [
+            'class' => 'yii\grid\ActionColumn',
+            'template' => '{view} {delete}',
+        ],
     ],
 ]);
 ?>

@@ -86,9 +86,9 @@ class SiteController extends Controller
         return $this->render('post', ['post' => $post]);
     }
 
-    public function actionRoot()
+    public function actionRoute()
     {
-        return $this->render('root');
+        return $this->render('rules');
     }
 
     public function actionPgrid()
@@ -100,6 +100,18 @@ class SiteController extends Controller
     {
         $model = Post::findOne($id);
 
+        if($model === null) {
+            Yii::$app->session->setFlash('error', 'Даное сообщение не найдено');
+            return $this->redirect('pgrid');
+        }
+
         return $this->render('view', ['model' => $model]);
+    }
+
+    public function actionDelete($id)
+    {
+        $model = Post::findOne($id)->delete();
+
+        return $this->render('pgrid');
     }
 }

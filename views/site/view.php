@@ -9,6 +9,7 @@ use yii\i18n\Formatter;
 $this->title = 'Пост';
 ?>
 
+
 <?php
 echo DetailView::widget([
     'model' => $model,
