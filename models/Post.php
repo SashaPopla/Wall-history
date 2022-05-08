@@ -44,7 +44,9 @@ class Post extends ActiveRecord
             ['author', 'string', 'max'=> 15],
             ['text', 'string', 'min'=> 30],
             ['text', 'string', 'max'=> 1000],
-            [['reCaptcha'], \himiklab\yii2\recaptcha\ReCaptchaValidator2::className(), 'secret' => '6LcztY4fAAAAAFXaiPADRTzkr5VFfUXNtXujHeRX', 'uncheckedMessage' => 'Пожалуйста, подтвердите, что вы не бот.'],
+            [['reCaptcha'], \himiklab\yii2\recaptcha\ReCaptchaValidator2::className(),
+                'secret' => '6LcztY4fAAAAAFXaiPADRTzkr5VFfUXNtXujHeRX',
+                'uncheckedMessage' => 'Пожалуйста, подтвердите, что вы не бот.'],
         ];
     }
 }

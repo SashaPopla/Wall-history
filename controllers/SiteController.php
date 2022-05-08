@@ -110,8 +110,8 @@ class SiteController extends Controller
 
     public function actionDelete($id)
     {
-        $model = Post::findOne($id)->delete();
+        $model = Post::findOne($id)->delete($id);
 
-        return $this->render('pgrid');
+        return $this->redirect('pgrid');
     }
 }
