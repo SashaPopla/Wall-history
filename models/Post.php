@@ -20,16 +20,6 @@ class Post extends ActiveRecord
         return 'post';
     }
 
-    public function Time()
-    {
-        return empty($this->time);
-    }
-
-    public function UserIp()
-    {
-        return empty($this->ip);
-    }
-
     public function attributeLabels(){
         return [
             'author' => 'Автор',

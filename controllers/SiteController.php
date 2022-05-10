@@ -110,7 +110,15 @@ class SiteController extends Controller
 
     public function actionDelete($id)
     {
-        $model = Post::findOne($id)->delete($id);
+        $model = Post::findOne($id);
+
+        if($model === null) {
+            Yii::$app->session->setFlash('error', 'Даное сообщение не найдено');
+            return $this->redirect('pgrid');
+        }
+        else{
+            $model->delete($id);
+        }
 
         return $this->redirect('pgrid');
     }
