@@ -38,7 +38,7 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav'],
         'items' => [
             ['label' => 'История', 'url' => ['/site/post']],
-            ['label' => 'Правила', 'url' => ['/site/root']],
+            ['label' => 'Правила', 'url' => ['/site/rules']],
         ],
     ]);
     NavBar::end();

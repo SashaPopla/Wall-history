@@ -2,6 +2,7 @@
 
 namespace app\models;
 
+use yii;
 use yii\db\ActiveRecord;
 
 /**
@@ -35,7 +36,7 @@ class Post extends ActiveRecord
             ['text', 'string', 'min'=> 30],
             ['text', 'string', 'max'=> 1000],
             [['reCaptcha'], \himiklab\yii2\recaptcha\ReCaptchaValidator2::className(),
-                'secret' => '6LcztY4fAAAAAFXaiPADRTzkr5VFfUXNtXujHeRX',
+                'secret' => Yii::$app->params['recaptcha.key'],
                 'uncheckedMessage' => 'Пожалуйста, подтвердите, что вы не бот.'],
         ];
     }

@@ -86,7 +86,7 @@ class SiteController extends Controller
         return $this->render('post', ['post' => $post]);
     }
 
-    public function actionRoute()
+    public function actionRules()
     {
         return $this->render('rules');
     }
